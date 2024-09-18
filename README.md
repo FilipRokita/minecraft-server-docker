@@ -98,7 +98,7 @@ Ubuntu Server 22.04 with:
     ```bash
     docker compose up -d
     ```
-    *Note:* The first time you run this command, you need to execute `docker compose up -d --build`. Also, make sure to run this command inside the `mcsrv` folder.
+    *Note*: If you are running this command for the first time after installation, use `docker compose up -d --build`. Also, ensure you are executing the command inside the `mcsrv` folder.
 
 - **Stop Server**
     ```bash
@@ -139,6 +139,6 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.6  
+**Version:** 1.0.7  
 **Date:** 2024-09-18  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
