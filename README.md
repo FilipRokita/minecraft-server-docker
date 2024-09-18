@@ -81,6 +81,9 @@ Ubuntu Server 22.04 with:
             *Note:* Adjust `-Xmx8G` to match the amount of RAM your server will use (in this case, 8GB).
     - Run the server manually for the first time, wait until the world generates, and stop it with `stop`.
 
+7. **Detach from the Container**
+    - Use `Ctrl + P`, then `Ctrl + Q`.
+
 8. **Finalize Docker Configuration**
     - Edit the `Dockerfile` to uncomment the `CMD` line and ensure it points to your `run.sh` script.
     - If necessary, modify the line to match the script provided by the modpack. (e.g, `startserver.sh`, `start.sh`, etc.)
@@ -132,6 +135,6 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.2  
+**Version:** 1.0.3  
 **Date:** 2024-09-18  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
