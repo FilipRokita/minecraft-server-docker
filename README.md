@@ -133,6 +133,6 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.0
+**Version:** 1.0.0  
 **Date:** 2024-09-18  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
