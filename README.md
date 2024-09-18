@@ -82,12 +82,19 @@ Ubuntu Server 22.04 with:
     ```bash
     docker compose up -d
     ```
+    *Note:* You must run this command inside `mcsrv` folder
 
 - **Stop Server**
     ```bash
     docker attach mcsrv-mc-1
     stop
     ```
+
+- **Stop Server (Emergency)**
+    ```bash
+    docker compose down
+    ```
+    **Note:** Use this command inside `mcsrv` folder if the server is unresponsive or crashes.
 
 - **Access Server Console**
     ```bash
