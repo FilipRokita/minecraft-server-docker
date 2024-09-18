@@ -10,7 +10,7 @@ Running a Minecraft server in a Docker container offers several advantages:
 - **Consistency**: Ensure that the server runs in the same environment every time, reducing issues related to system differences.
 
 ## Prerequisites
-- Git, Docker and Docker Engine installed on your machine.
+- Git and Docker Engine installed on your machine.
 - Basic familiarity with Docker commands.
 
 ## Tested On
