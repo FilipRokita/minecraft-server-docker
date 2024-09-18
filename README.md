@@ -10,14 +10,14 @@ Running a Minecraft server in a Docker container offers several advantages:
 - **Consistency**: Ensure that the server runs in the same environment every time, reducing issues related to system differences.
 
 ## Prerequisites
-- Git, Docker, and Docker Compose installed on your machine.
+- Git, Docker and Docker Engine installed on your machine.
 - Basic familiarity with Docker commands.
 
 ## Tested On
 Ubuntu Server 22.04 with:
-- [All the Mods 10 - ATM 10](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10)
-- [Better MC [FORGE] - BMC4](https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc4)
-- [RLCraft](https://www.curseforge.com/minecraft/modpacks/rlcraft)
+- [All the Mods 10-0.53](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10)
+- [Better MC [FORGE] BMC4 v32.5](https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc4)
+- [RLCraft 1.12.2 - Release v2.9.3](https://www.curseforge.com/minecraft/modpacks/rlcraft)
 
 ## Installation
 
@@ -50,13 +50,13 @@ Ubuntu Server 22.04 with:
 
 5. **Build and Run Docker Container**
     ```bash
-    docker-compose up -d
+    docker compose up -d
     ```
     *Note:* You must run this command inside `mcsrv` folder
 
 6. **Attach to the Container**
     ```bash
-    docker attach mcsrv_minecraft
+    docker attach mcsrv-mc-1
     ```
     You are now in the Docker container.  
     *Note:* You must run this command inside `mcsrv` folder
@@ -66,15 +66,15 @@ Ubuntu Server 22.04 with:
         - Run `java -jar server.jar`.
         - Accept the EULA by editing `eula.txt`.
         - Create a `run.sh` script with:
-        ```bash
-        java -Xmx8G -jar server.jar nogui
-        ```
-        *Note:* Adjust `-Xmx8G` to match the amount of RAM your server will use (in this case, 8GB).
+            ```bash
+            java -Xmx8G -jar server.jar nogui
+            ```
+            *Note:* Adjust `-Xmx8G` to match the amount of RAM your server will use (in this case, 8GB).
     - Run the server manually for the first time, wait until the world generates, and stop it with `stop`.
 
 8. **Finalize Docker Configuration**
     - Edit the `Dockerfile` to uncomment the `CMD` line and ensure it points to your `run.sh` script.
-    - If necessary, modify `run.sh` to match the script provided by the modpack. (e.g, `startserver.sh`, `start.sh`)
+    - If necessary, modify the line to match the script provided by the modpack. (e.g, `startserver.sh`, `start.sh`, etc.)
 
 ## Usage
 
@@ -109,3 +109,12 @@ Ubuntu Server 22.04 with:
     docker system prune -a
     ```
     **Warning:** This will remove all unused containers, networks, images, and optionally, volumes. Use with caution.
+
+## Troubleshooting
+If you encounter any issues or have questions, consider the following resources:
+- [Docker Docs](https://docs.docker.com/)
+
+---
+
+**Date:** 2024-09-18  
+**Author:** [Filip Rokita](https://www.filiprokita.com/)
