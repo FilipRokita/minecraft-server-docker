@@ -139,6 +139,6 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.4  
+**Version:** 1.0.5  
 **Date:** 2024-09-18  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)

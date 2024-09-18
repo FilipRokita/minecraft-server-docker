@@ -11,5 +11,5 @@ WORKDIR /data
 
 EXPOSE 25565
 
-# Uncomment the line below after completing the initial server configuration (Installation Step 7)
+# INSTALLATION STEP 9 - Uncomment/modify the line below after completing the initial server configuration.
 #CMD ["bash", "./run.sh"]
