@@ -10,7 +10,7 @@ Running a Minecraft server in a Docker container offers several advantages:
 - **Consistency**: Ensure that the server runs in the same environment every time, reducing issues related to system differences.
 
 ## Prerequisites
-- Git, Docker and Docker Compose installed on your machine.
+- Git, Docker, and Docker Compose installed on your machine.
 - Basic familiarity with Docker commands.
 
 ## Tested On
@@ -27,22 +27,21 @@ Ubuntu Server 22.04 with:
     ```
 
 2. **Rename the Repository Folder**
-    
     ```bash
     mv minecraft-server-docker mcsrv
     ```
 
 3. **Edit Dockerfile**
-    - Open the `Dockerfile` and find the line that installs Java:
+    - Open the `Dockerfile` and locate the line that installs Java:
     ```dockerfile
     RUN apt-get update && \
         apt-get install -y curl openjdk-21-jre-headless wget
     ```
-    - If you are running older version of minecraft change java version to `openjdk-8-jre-headless`
-    - If your server needs additional packages, add them to the same line. For example, if `unzip` is required, modify the line to:
+    - If you are running an older version of Minecraft, change the Java version to `openjdk-8-jre-headless`.
+    - If your server runs an older Minecraft version and requires additional packages (e.g., `unzip`), modify the line to:
     ```dockerfile
     RUN apt-get update && \
-        apt-get install -y curl openjdk-17-jre-headless wget unzip
+        apt-get install -y curl openjdk-8-jre-headless wget unzip
     ```
 
 4. **Download Server Files**
@@ -53,28 +52,29 @@ Ubuntu Server 22.04 with:
     ```bash
     docker-compose up -d
     ```
+    *Note:* You must run this command inside `mcsrv` folder
 
 6. **Attach to the Container**
     ```bash
-    docker attach mcsrv-mc-1
+    docker attach mcsrv_minecraft
     ```
-    Now you are in the docker container.
+    You are now in the Docker container.  
+    *Note:* You must run this command inside `mcsrv` folder
 
 7. **Initial Server Configuration**
-    - Follow the server or modpack guide for initial setup.
-    - Typical steps include:
-        - Downloading the `.jar` server file or `.zip` server files and unpack them into `data` folder.
-        - Running `java -jar server.jar`.
-        - Accepting the EULA by editing `eula.txt`.
-        - Creating a `run.sh` script with:
+    - Follow the server or modpack guide for initial setup. Common steps include:
+        - Run `java -jar server.jar`.
+        - Accept the EULA by editing `eula.txt`.
+        - Create a `run.sh` script with:
         ```bash
         java -Xmx8G -jar server.jar nogui
         ```
-        Note: -Xmx8G change it to any other amount of ram that your server will use, in this case its 8GB
-    - Run the server manually for the first time, wait until the world genereates etc. and stop it with `stop`.
+        *Note:* Adjust `-Xmx8G` to match the amount of RAM your server will use (in this case, 8GB).
+    - Run the server manually for the first time, wait until the world generates, and stop it with `stop`.
 
 8. **Finalize Docker Configuration**
     - Edit the `Dockerfile` to uncomment the `CMD` line and ensure it points to your `run.sh` script.
+    - If necessary, modify `run.sh` to match the script provided by the modpack. (e.g, `startserver.sh`, `start.sh`)
 
 ## Usage
 
@@ -95,11 +95,11 @@ Ubuntu Server 22.04 with:
     ```
 
 - **Exit Console**
-    - Use `Ctrl + P` then `Ctrl + Q`.
+    - Use `Ctrl + P`, then `Ctrl + Q`.
 
 ## Uninstallation
 
-1. **Remove Project Folder**
+1. **Remove Folder**
     ```bash
     rm -rf mcsrv
     ```

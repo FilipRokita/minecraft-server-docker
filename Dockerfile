@@ -12,4 +12,5 @@ WORKDIR /data
 
 EXPOSE 25565
 
-CMD ["bash", "./run.sh"]
+# Uncomment the line below after completing the initial server configuration (Step 7)
+#CMD ["bash", "./run.sh"]
