@@ -68,8 +68,7 @@ Ubuntu Server 22.04 with:
     ```bash
     docker attach mcsrv-mc-1
     ```
-    You are now in the Docker container.  
-    *Note:* You must run this command inside `mcsrv` folder
+    You are now in the Docker container.
 
 7. **Initial Server Configuration**
     - Follow the server or modpack guide for initial setup. Common steps include:
@@ -133,6 +132,6 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 **Date:** 2024-09-18  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
