@@ -37,8 +37,7 @@ Ubuntu Server 22.04 with:
         RUN apt-get update && \
             apt-get install -y curl openjdk-21-jre-headless wget
         ```
-    - If you are running an older version of Minecraft, change the Java version to `openjdk-8-jre-headless`.  
-        e.g. If your server runs an older Minecraft version and requires additional packages (e.g., `unzip`), modify the line to:
+    - If you are running an older version of Minecraft, change the Java version to `openjdk-8-jre-headless`. Additionally, if your server requires extra packages (such as `unzip`) add them to this line. For example:
         ```dockerfile
         RUN apt-get update && \
             apt-get install -y curl openjdk-8-jre-headless wget unzip
