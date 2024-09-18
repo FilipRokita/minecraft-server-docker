@@ -71,7 +71,7 @@ Ubuntu Server 22.04 with:
     You are now in the Docker container.
 
 7. **Initial Server Configuration**
-    - Follow the server or modpack guide for initial setup. Common steps include:
+    - Follow the server or modpack guide for the initial setup. If no guide is available, common steps include:
         - Run `java -jar server.jar`.
         - Accept the EULA by editing `eula.txt`.
         - Create a `run.sh` script with:
@@ -132,6 +132,6 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.1  
+**Version:** 1.0.2  
 **Date:** 2024-09-18  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
