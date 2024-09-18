@@ -1,6 +1,6 @@
 # Minecraft Server in Docker
 
-## Short Description
+## Overview
 This project provides a Docker setup for running a Minecraft server. It simplifies the process of setting up and managing Minecraft servers by using Docker, making it easier to deploy and maintain different Minecraft server versions and modpacks.
 
 ## Why Use Docker for Minecraft Server?
@@ -115,10 +115,10 @@ Ubuntu Server 22.04 with:
     ```bash
     docker system prune -a
     ```
-    **Warning:** This will remove all unused containers, networks, images, and optionally, volumes. Use with caution.
+    **Warning: This will remove all unused containers, networks, images, and optionally, volumes. Use with caution.**
 
 ## Troubleshooting
-If you encounter any issues or have questions, consider the following resources:
+For issues or questions, refer to:
 - [Docker Docs](https://docs.docker.com/)
 
 ---
