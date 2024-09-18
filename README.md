@@ -81,8 +81,12 @@ Ubuntu Server 22.04 with:
             *Note:* Adjust `-Xmx8G` to match the amount of RAM your server will use (in this case, 8GB).
     - Run the server manually for the first time, wait until the world generates, and stop it with `stop`.
 
-7. **Detach from the Container**
-    - Use `Ctrl + P`, then `Ctrl + Q`.
+7. **Detach and Stop the Container**
+    - Use `Ctrl + P`, then `Ctrl + Q` to detach from the container.
+    - Run this command from `mcsrv` folder to stop the container:
+    ```bash
+    docker compose down
+    ```
 
 8. **Finalize Docker Configuration**
     - Edit the `Dockerfile` to uncomment the `CMD` line and ensure it points to your `run.sh` script.
