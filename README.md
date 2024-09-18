@@ -83,7 +83,7 @@ Ubuntu Server 22.04 with:
 
 7. **Detach and Stop the Container**
     - Use `Ctrl + P`, then `Ctrl + Q` to detach from the container.
-    - Run this command from `mcsrv` folder to stop the container:
+    - Run this command inside `mcsrv` folder to stop the container:
     ```bash
     docker compose down
     ```
@@ -139,6 +139,6 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.3  
+**Version:** 1.0.4  
 **Date:** 2024-09-18  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
