@@ -56,7 +56,7 @@ Ubuntu Server 22.04 with:
         RUN apt-get update && \
             apt-get install -y curl openjdk-8-jdk wget unzip
         ```
-        Some servers might work with only `openjdk-X-jre-headless`, but you’ll need to experiment to find what works best.
+        Some servers might work with only `openjdk-X-jre-headless` installed, but you’ll need to experiment to find what works best.
 
 4. **Create a Symlink to Docker Volume**
    - From inside the `mcsrv` directory, create a symlink to the Docker volume for easy access to your data:
