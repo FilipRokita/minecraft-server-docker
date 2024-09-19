@@ -144,7 +144,6 @@ Ubuntu Server 22.04 with:
     docker image rm mcsrv-mc
     docker volume rm mcsrv_data
     ```
-    **Warning: This will remove all unused containers, networks, images, and optionally, volumes. Use with caution.**
 
 ## Troubleshooting
 For issues or questions, refer to:
