@@ -45,7 +45,7 @@ Ubuntu Server 22.04 with:
     mv minecraft-server-docker mcsrv
     ```
 
-3. **Edit Dockerfile**
+3. **Edit Dockerfile (if needed)**
     - Open the `Dockerfile` and locate the line that installs Java:
         ```dockerfile
         RUN apt-get update && \
@@ -155,7 +155,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.15  
+**Version:** 1.0.16  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
