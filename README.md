@@ -155,7 +155,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.14  
+**Version:** 1.0.15  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
