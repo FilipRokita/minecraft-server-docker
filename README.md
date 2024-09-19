@@ -56,6 +56,7 @@ Ubuntu Server 22.04 with:
         RUN apt-get update && \
             apt-get install -y curl openjdk-8-jdk wget unzip
         ```
+        Some servers might work with only `openjdk-X-jre-headless`, but you’ll need to experiment to find what works best.
 
 4. **Download Server Files**
     - Download the Minecraft server files or modpack server files.
@@ -142,7 +143,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.10  
+**Version:** 1.0.11  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
