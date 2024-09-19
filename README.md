@@ -85,14 +85,21 @@ Ubuntu Server 22.04 with:
             *Note:* Adjust `-Xmx8G` to match the amount of RAM your server will use (in this case, 8GB).
     - Run the server manually for the first time, wait until the world generates, and stop it with `stop`.
 
-7. **Detach and Stop the Container**
+8. **Detach and Stop the Container**
     - Use `Ctrl + P`, then `Ctrl + Q` to detach from the container.
     - Run this command inside `mcsrv` folder to stop the container:
     ```bash
     docker compose down
     ```
 
-8. **Finalize Docker Configuration**
+9. **Create a Symlink to Docker Volume**
+   - From inside the `mcsrv` directory, create a symlink to the Docker volume for easy access to your data:
+     ```bash
+     ln -s /var/lib/docker/volumes/mcsrv_data/_data data
+     ```
+   - *Note:* The path to the volume may vary. You can check the exact path using `docker volume inspect mcsrv_data`
+
+10. **Finalize Docker Configuration**
     - Edit the `Dockerfile` to uncomment the `CMD` line and ensure it points to your `run.sh` script.
     - If necessary, modify the line to match the script provided by the modpack. (e.g, `startserver.sh`, `start.sh`, etc.)
 
@@ -131,9 +138,11 @@ Ubuntu Server 22.04 with:
     rm -rf mcsrv
     ```
 
-2. **Clean Docker Containers, Images, etc.**
+2. **Remove Docker Container, Image, and Volume**
     ```bash
-    docker system prune -a
+    docker container rm -f mcsrv-mc-1
+    docker image rm mcsrv-mc
+    docker volume rm mcsrv_data
     ```
     **Warning: This will remove all unused containers, networks, images, and optionally, volumes. Use with caution.**
 
@@ -143,7 +152,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.11  
+**Version:** 1.0.12  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
