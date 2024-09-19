@@ -49,12 +49,12 @@ Ubuntu Server 22.04 with:
     - Open the `Dockerfile` and locate the line that installs Java:
         ```dockerfile
         RUN apt-get update && \
-            apt-get install -y curl openjdk-21-jre-headless wget
+            apt-get install -y curl openjdk-21-jdk wget
         ```
     - If you are running an older version of Minecraft, change the Java version to `openjdk-8-jre-headless`. Additionally, if your server requires extra packages (such as `unzip`) add them to this line. For example:
         ```dockerfile
         RUN apt-get update && \
-            apt-get install -y curl openjdk-8-jre-headless wget unzip
+            apt-get install -y curl openjdk-8-jdk wget unzip
         ```
 
 4. **Download Server Files**
@@ -142,7 +142,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.8  
+**Version:** 1.0.9  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
