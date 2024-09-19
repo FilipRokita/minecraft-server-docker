@@ -29,6 +29,7 @@ Ubuntu Server 22.04 with:
 - [All the Mods 9-0.3.2](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9)
 - [All the Mods 10-0.53](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10)
 - [Better MC [FORGE] BMC4 v32.5](https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc4)
+- [Paper 1.21.1](https://papermc.io/)
 - [RLCraft 1.12.2 - Release v2.9.3](https://www.curseforge.com/minecraft/modpacks/rlcraft)
 - [Vanilla 1.21.1](https://www.minecraft.net/pl-pl/download/server)
 
@@ -141,7 +142,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.7  
+**Version:** 1.0.8  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
