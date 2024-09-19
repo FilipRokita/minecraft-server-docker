@@ -78,6 +78,9 @@ Ubuntu Server 22.04 with:
     - Follow the server or modpack guide for the initial setup. If no guide is available, common steps include:
         - Run `java -jar server.jar`.
         - Accept the EULA by editing `eula.txt`.
+            ```bash
+            echo eula=true > eula.txt
+            ```
         - Create a `run.sh` script with:
             ```bash
             java -Xmx8G -jar server.jar nogui
@@ -151,7 +154,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.12  
+**Version:** 1.0.13  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
