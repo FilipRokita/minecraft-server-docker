@@ -58,7 +58,7 @@ Ubuntu Server 22.04 with:
         ```
         Some servers might work with only `openjdk-X-jre-headless` installed, but you’ll need to experiment to find what works best.
 
-4. **Create a Symlink to Docker Volume**
+4. **Build Container and Create Symlink**
    - From inside the `mcsrv` directory, create a symlink to the Docker volume for easy access to your data:
      ```bash
      docker compose up && docker compose down
@@ -155,7 +155,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.16  
+**Version:** 1.0.17  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
