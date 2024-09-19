@@ -58,23 +58,31 @@ Ubuntu Server 22.04 with:
         ```
         Some servers might work with only `openjdk-X-jre-headless`, but you’ll need to experiment to find what works best.
 
-4. **Download Server Files**
+4. **Create a Symlink to Docker Volume**
+   - From inside the `mcsrv` directory, create a symlink to the Docker volume for easy access to your data:
+     ```bash
+     docker compose up && docker compose down
+     ln -s /var/lib/docker/volumes/mcsrv_data/_data data
+     ```
+   - *Note:* The path to the volume may vary. You can check the exact path using `docker volume inspect mcsrv_data`
+
+5. **Download Server Files**
     - Download the Minecraft server files or modpack server files.
     - Place the `.jar` file or unzipped files into the `data` folder.
 
-5. **Build and Run Docker Container**
+6. **Build and Run Docker Container**
     ```bash
     docker compose up -d
     ```
     *Note:* You must run this command inside `mcsrv` folder
 
-6. **Attach to the Container**
+7. **Attach to the Container**
     ```bash
     docker attach mcsrv-mc-1
     ```
     You are now in the Docker container.
 
-7. **Initial Server Configuration**
+8. **Initial Server Configuration**
     - Follow the server or modpack guide for the initial setup. If no guide is available, common steps include:
         - Run `java -jar server.jar`.
         - Accept the EULA by editing `eula.txt`.
@@ -88,19 +96,12 @@ Ubuntu Server 22.04 with:
             *Note:* Adjust `-Xmx8G` to match the amount of RAM your server will use (in this case, 8GB).
     - Run the server manually for the first time, wait until the world generates, and stop it with `stop`.
 
-8. **Detach and Stop the Container**
+9. **Detach and Stop the Container**
     - Use `Ctrl + P`, then `Ctrl + Q` to detach from the container.
     - Run this command inside `mcsrv` folder to stop the container:
     ```bash
     docker compose down
     ```
-
-9. **Create a Symlink to Docker Volume**
-   - From inside the `mcsrv` directory, create a symlink to the Docker volume for easy access to your data:
-     ```bash
-     ln -s /var/lib/docker/volumes/mcsrv_data/_data data
-     ```
-   - *Note:* The path to the volume may vary. You can check the exact path using `docker volume inspect mcsrv_data`
 
 10. **Finalize Docker Configuration**
     - Edit the `Dockerfile` to uncomment the `CMD` line and ensure it points to your `run.sh` script.
@@ -154,7 +155,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.13  
+**Version:** 1.0.14  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
