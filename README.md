@@ -70,7 +70,7 @@ Ubuntu Server 22.04 with:
     - Download the Minecraft server files or modpack server files.
     - Place the `.jar` file or unzipped files into the `data` folder.
 
-6. **Build and Run Docker Container**
+6. **Run Docker Container**
     ```bash
     docker compose up -d
     ```
@@ -155,7 +155,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.17  
+**Version:** 1.0.18  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
