@@ -153,10 +153,6 @@ Ubuntu Server 22.04 with:
 For issues or questions, refer to:
 - [Docker Docs](https://docs.docker.com/)
 
-## Contributors
-- [Filip Rokita](https://github.com/FilipRokita)
-- [Puddlejumper_](https://www.reddit.com/user/Puddlejumper_/)
-
 ## Additional Information
 
 **Version:** 1.0.19  
