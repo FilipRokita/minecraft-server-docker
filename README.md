@@ -61,7 +61,7 @@ Ubuntu Server 22.04 with:
 4. **Build Container and Create Symlink**
    - From inside the `mcsrv` directory, create a symlink to the Docker volume for easy access to your data:
      ```bash
-     docker compose up && docker compose down
+     docker compose up -d --build && docker compose down
      ln -s /var/lib/docker/volumes/mcsrv_data/_data data
      ```
    - *Note:* The path to the volume may vary. You can check the exact path using `docker volume inspect mcsrv_data`
@@ -155,7 +155,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.19  
+**Version:** 1.0.20  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
