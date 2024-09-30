@@ -119,6 +119,7 @@ Ubuntu Server 22.04 with:
     ```bash
     docker attach mcsrv-mc-1
     stop
+    docker compose down
     ```
 
 - **Stop Server (Emergency)**
@@ -155,7 +156,7 @@ For issues or questions, refer to:
 
 ## Additional Information
 
-**Version:** 1.0.20  
+**Version:** 1.0.21  
 **Date:** 2024-09-18  
 **License:** [MIT License](LICENSE)  
 **Author:** [Filip Rokita](https://www.filiprokita.com/)
